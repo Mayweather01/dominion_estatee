@@ -190,6 +190,36 @@
 </section>
 
 
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="container reveal" aria-label="Testimonials">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">What clients say</span>
+        <h2>Owners & investors trust us</h2>
+      </div>
+    </div>
+    <div class="slider">
+      <div class="slides" id="slides">
+        <article class="slide">
+          <p>“AA Dominion handled my land registration quickly and professionally. Clear updates, zero surprises.”</p>
+          <div class="slide-foot"><img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=128&h=128&fit=crop" alt="Mr Ade"/> <div><strong>Mr Ade</strong><br><small>Investor</small></div></div>
+        </article>
+        <article class="slide">
+          <p>“Their design made my house stand out, yet stayed within budget. The team was meticulous.”</p>
+          <div class="slide-foot"><img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=128&h=128&fit=crop" alt="Mrs Bello"/> <div><strong>Mrs Bello</strong><br><small>Homeowner</small></div></div>
+        </article>
+        <article class="slide">
+          <p>“Reliable tenant management. I don’t worry about rent or maintenance calls anymore.”</p>
+          <div class="slide-foot"><img class="avatar" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=128&h=128&fit=crop" alt="Mr Yusuf"/> <div><strong>Mr Yusuf</strong><br><small>Landlord</small></div></div>
+        </article>
+      </div>
+      <div class="dots" id="dots" aria-hidden="true"></div>
+    </div>
+  </section>
+
+
+
     <!-- Highlights / Why Us -->
     <section id="highlights" class="reveal">
       <div class="section-head">
@@ -315,6 +345,21 @@
       })
     }, { threshold: .14 });
     revealEls.forEach(el => io.observe(el));
+
+// Testimonials slider (auto + dots)
+    const slides = document.getElementById('slides');
+    const dots = document.getElementById('dots');
+    function makeDots(){
+      const count = slides.children.length; dots.innerHTML='';
+      for(let i=0;i<count;i++){const d=document.createElement('span');d.className='dot';dots.appendChild(d)}
+      dots.firstChild.classList.add('active')
+    }
+    makeDots();
+    let index=0; setInterval(()=>{
+      const count = slides.children.length; index = (index+1)%count;
+      slides.scrollTo({left: index* (slides.children[0].offsetWidth+16), behavior:'smooth'});
+      dots.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active', i===index));
+    }, 4000);
 
     // Fake form submit (replace with your backend or Formspree/Netlify)
     function submitForm(evt){
