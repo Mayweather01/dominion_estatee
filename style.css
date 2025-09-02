@@ -16,6 +16,28 @@
     overflow-x: hidden;
     }
 
+    
+  .company-about {
+    max-width: 800px;   /* keeps it neat, not stretching too wide */
+    margin: 0 auto;     /* centers the block */
+    font-size: 1.05rem; /* slightly bigger for readability */
+    line-height: 1.8;   /* elegant spacing */
+    color: #222;        /* professional dark gray */
+    text-align: justify;
+  }
+
+  /* On smaller screens (phones), use left alignment for better readability */
+  @media (max-width: 768px) {
+    .company-about {
+      text-align: left;
+      padding: 0 15px; /* breathing space on the sides */
+    }
+  }
+
+
+
+
+
 
 
 
