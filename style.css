@@ -18,16 +18,16 @@
 
     
   .company-about {
-    max-width: 800px;       /* keeps the text in a neat column */
-    margin: 40px auto;      /* centers the block */
-    padding: 0 20px;        /* breathing space on mobile */
-    font-size: 1.1rem;      /* professional readable size */
-    line-height: 1.8;       /* elegant spacing */
-    color: #222;            /* professional dark tone */
-    font-family: "Segoe UI", Roboto, sans-serif;
-    text-align: justify;    /* balances both left & right */
-    text-justify: inter-word;
-  }
+  max-width: 800px;          /* neat column */
+  margin: 20px auto;         /* less gap top/bottom */
+  padding: 0 16px;           /* balanced mobile padding */
+  font-size: 1.05rem;        /* slightly smaller, readable */
+  line-height: 1.6;          /* tighter but still elegant */
+  color: #222;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  text-align: justify;
+  text-justify: inter-word;
+}
 
 
 
