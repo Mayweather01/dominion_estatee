@@ -45,6 +45,42 @@
     </div>
   </header>
 
+  <style>
+.hero-caption {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+
+  .hero-caption {
+    display: inline-block;
+    white-space: nowrap;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #222;
+    animation: scrollLeft 18s linear infinite; /* smooth loop */
+  }
+
+  @keyframes scrollLeft {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+</style>
+
+<div class="hero-caption-wrapper">
+  <div class="hero-caption">
+    Building Trust • Creating Value • Shaping the Future — AA Dominion Estate Management Ltd
+  </div>
+</div>
+
+
   <!-- Hero -->
   <main id="top" class="container">
     <section class="hero reveal">
